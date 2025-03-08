@@ -1,22 +1,139 @@
+---
+import "./src/styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Astro</title>
+    <!-- FlowBite CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+
+    <!-- Remix icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Glide.js CSS CDN -->
+
+    <style>
+      /* Custom off-white background class */
+      .bg-offwhite {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-black md:bg-[#1D1C1C]">
+    <!-- [0] (Navbar) Start -->
+    <header>
+      <nav class="w-full flex justify-center fixed z-20 top-0 ">
+        <div
+          class="navbar w-full bg-[#1D1C1C] md:bg-black rounded-b-2xl md:w-[800px] h-12 shadow-xl flex justify-between items-center  "
+        >
+          <div class="logo flex items-center h-full">
+            <h1 class="ps-4 strikeFont text-[#dcff9c] tracking-widest">
+              ShivHandiCraft
+            </h1>
+          </div>
+
+          <div class="links-container md:w-2/3 z-50 sm:ps-40">
+            <ul
+              class="links bg-black text-white md:text-black fixed top-0 left-0 right-0 bottom-0 flex flex-col gap-10 md:gap-7 px-7 pt-40 ps-10 translate-x-[-100%] transition-transform duration-500 md:relative md:flex-row md:bg-transparent md:top-auto md:left-auto md:pt-0 md:translate-x-0 md:items-center"
+            >
+              <li
+                class="decoration-[#dcff9c] text-2xl hover:text-3xl duration-[0.4s] md:text-lg text-white w-36 md:w-fit hover:underline hover:cursor-pointer sm:hover:no-underline sm:hover:text-lg sm:text-lg sm:px-1 sm:py-1 rounded-sm"
+              >
+                <a href="/"> Home </a>
+              </li>
+
+              <li
+                class="decoration-[#dcff9c] text-2xl hover:text-3xl duration-[0.4s] md:text-sm text-gray-500 w-36 md:w-fit hover:underline hover:cursor-pointer hover:text-white sm:hover:no-underline sm:hover:text-lg"
+              >
+                <a href="services"> Services </a>
+              </li>
+
+              <li
+                class="decoration-[#dcff9c] text-2xl hover:text-3xl sm:hover:text-lg duration-[0.4s] md:text-sm text-gray-500 w-36 md:w-fit hover:underline hover:cursor-pointer hover:text-white sm:hover:no-underline"
+              >
+                <a href="contact.html"> Contact </a>
+              </li>
+
+              <li
+                class="decoration-[#dcff9c] text-2xl hover:text-3xl sm:hover:text-lg duration-[0.4s] md:text-sm text-gray-500 w-36 md:w-fit hover:underline hover:cursor-pointer hover:text-white sm:hover:no-underline"
+              >
+                <a href="../admin/admin_index.html"> Admin </a>
+              </li>
+              <li class="absolute top-6 right-6 md:hidden">
+                <button id="closeMenuToggle">
+                  <i class="fa-regular fa-xmark-large text-[#dcff9c]"></i>
+                </button>
+              </li>
+              <div
+                class="social absolute bottom-10 right-10 text-xl flex gap-3 md:hidden"
+              >
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-phone-rotary"></i>
+              </div>
+            </ul>
+          </div>
+
+          <div id="MenuIcon" class="menu-icon pe-4 md:hidden">
+            <button id="menuToggleOpen" class="">
+              <i class="fa-solid fa-bars text-white"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- [0] (Navbar) End -->
+    <slot />
+    <script
+      src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+    ></script>
+
+    <script is:inline>
+      const MenuToogelOpen = document.querySelector("#menuToggleOpen");
+      const slider = document.querySelector(".links");
+      const clsSlider = document.querySelector("#closeMenuToggle");
+
+      MenuToogelOpen.addEventListener("click", function (e) {
+        console.log("slider opened");
+
+        slider.classList.remove("translate-x-[-100%]");
+        slider.classList.add("translate-x-0");
+      });
+
+      clsSlider.addEventListener("click", function (e) {
+        console.log("Slider Closed");
+
+        slider.classList.add("translate-x-[-100%]");
+        slider.classList.remove("translate-x-0");
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Navbar scroll behavior
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            header.classList.add("bg-white/95", "backdrop-blur-sm");
+            header.classList.remove("bg-white");
+          } else {
+            header.classList.remove("bg-white/95", "backdrop-blur-sm");
+            header.classList.add("bg-white");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

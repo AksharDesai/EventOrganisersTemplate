@@ -1,210 +1,707 @@
----
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
----
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
 
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
+<!-- Content with padding-top to account for fixed navbar -->
+<main>
+  <!-- Above the Fold: Two-Column Layout -->
+  <section
+    class="grid grid-cols-1 md:grid-cols-[30%_70%] min-h-[100vh] md:min-h-[80vh] md:mt-20 "
+  >
+    <!-- Hero Section (Left Column) -->
+    <div
+      class="relative flex flex-col justify-center items-center p-8 text-white  border-l-2 border-[#d7ff9c]"
+      style="background-color: black;  background-repeat: repeat;"
+    >
+      <h1 class="text-5xl font-serif text-black">KlassyCafe</h1>
+      <p class="text-2xl font-serif mt-2">The Best Experience</p>
+      <button
+        class="mt-4 text-black py-2 px-4 bg-[#D7FF9C] rounded transition-colors duration-300"
+      >
+        Make a Reservation
+      </button>
+    </div>
+    <!-- Image Slider (Right Column) -->
+    <div class="flex w-full h-full items-center justify-center overflow-hidden">
+      <div class="slider w-full h-full relative">
+        <div class="slide active">
+          <img src="images/slide-01.jpg" alt="Restaurant Ambiance 1" />
+        </div>
+        <div class="slide">
+          <img src="images/slide-02.jpg" alt="Restaurant Ambiance 2" />
+        </div>
+        <div class="slide">
+          <img src="images/slide-03.jpg" alt="Restaurant Ambiance 3" />
+        </div>
+        <div class="slide">
+          <img src="images/slide-02.jpg" alt="Restaurant Ambiance 4" />
+        </div>
+        <!-- Navigation Arrows -->
+        <button
+          id="prev"
+          class="hidden "
+        >
+          &#10094;
+        </button>
+        <button
+          id="next"
+          class=" hidden "
+        >
+          &#10095;
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+ 
+  
+  
+</main>
+
+<section
+  id="collection"
+  class="py-24 mt-6 bg-[#1D1C1C] "
+  data-astro-cid-j7pv25f6=""
+  data-astro-source-loc="112:58"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    data-astro-cid-j7pv25f6=""
+    data-astro-source-loc="113:55"
+  >
+    <div
+      class="grid lg:grid-cols-2 gap-16 items-center"
+      data-astro-cid-j7pv25f6=""
+      data-astro-source-loc="114:58"
+    >
+      <div
+        class="animate__animated animate__fadeInLeft"
+        data-astro-cid-j7pv25f6=""
+        data-astro-source-loc="115:55"
+      >
+        <h2
+          class="text-4xl font-secondary text-white mb-6"
+          data-astro-cid-j7pv25f6=""
+          data-astro-source-loc="116:58"
+        >
+          The Art of Wicker Craftsmanship
+        </h2>
+        <p
+          class="text-white font-primary mb-8 leading-relaxed"
+          data-astro-cid-j7pv25f6=""
+          data-astro-source-loc="119:65"
+        >
+          Each piece tells a story of dedication, expertise, and timeless
+          artistry. Our master craftsmen blend centuries-old techniques with
+          contemporary design sensibilities.
+        </p>
+        <div
+          class="space-y-4"
+          data-astro-cid-j7pv25f6=""
+          data-astro-source-loc="122:29"
+        >
+          <div
+            class="flex items-start space-x-4"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="123:45"
+          >
+            <div
+              class="flex-shrink-0"
+              data-astro-cid-j7pv25f6=""
+              data-astro-source-loc="124:34"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-[#D7FF9C] flex items-center justify-center"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="125:86"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  data-astro-cid-j7pv25f6=""
+                  data-astro-source-loc="126:100"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                    data-astro-cid-j7pv25f6=""
+                    data-astro-source-loc="127:8"></path>
+                </svg>
+              </div>
+            </div>
+            <div data-astro-cid-j7pv25f6="" data-astro-source-loc="131:12">
+              <h3
+                class="text-white font-primary text-lg mb-2"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="132:55"
+              >
+                Hand-Woven Excellence
+              </h3>
+              <p
+                class="text-white"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="133:31"
+              >
+                Meticulously crafted by skilled artisans using traditional
+                techniques
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="136:45"
+          >
+            <div
+              class="flex-shrink-0"
+              data-astro-cid-j7pv25f6=""
+              data-astro-source-loc="137:34"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-[#D7FF9C] flex items-center justify-center"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="138:86"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  data-astro-cid-j7pv25f6=""
+                  data-astro-source-loc="139:100"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                    data-astro-cid-j7pv25f6=""
+                    data-astro-source-loc="140:8"></path>
+                </svg>
+              </div>
+            </div>
+            <div data-astro-cid-j7pv25f6="" data-astro-source-loc="144:12">
+              <h3
+                class="text-whitefont-primary text-lg mb-2"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="145:55"
+              >
+                Sustainable Materials
+              </h3>
+              <p
+                class="text-white"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="146:31"
+              >
+                Ethically sourced premium wicker and eco-friendly processes
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="149:45"
+          >
+            <div
+              class="flex-shrink-0"
+              data-astro-cid-j7pv25f6=""
+              data-astro-source-loc="150:34"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-[#D7FF9C] flex items-center justify-center"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="151:86"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  data-astro-cid-j7pv25f6=""
+                  data-astro-source-loc="152:100"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                    data-astro-cid-j7pv25f6=""
+                    data-astro-source-loc="153:8"></path>
+                </svg>
+              </div>
+            </div>
+            <div data-astro-cid-j7pv25f6="" data-astro-source-loc="157:12">
+              <h3
+                class="text-white font-primary text-lg mb-2"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="158:55"
+              >
+                Timeless Design
+              </h3>
+              <p
+                class="text-white"
+                data-astro-cid-j7pv25f6=""
+                data-astro-source-loc="159:31"
+              >
+                Contemporary aesthetics merged with classic craftsmanship
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-2 gap-6 animate__animated animate__fadeInRight"
+        data-astro-cid-j7pv25f6=""
+        data-astro-source-loc="165:79"
+      >
+        <div
+          class="space-y-6"
+          data-astro-cid-j7pv25f6=""
+          data-astro-source-loc="166:29"
+        >
+          <div
+            class="bg-neutral-200 aspect-square rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="167:6"
+          >
+          </div>
+          <div
+            class="bg-neutral-200 aspect-square rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300 translate-y-12"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="168:6"
+          >
+          </div>
+        </div>
+        <div
+          class="space-y-6"
+          data-astro-cid-j7pv25f6=""
+          data-astro-source-loc="170:29"
+        >
+          <div
+            class="bg-neutral-200 aspect-square rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300 -translate-y-12"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="171:6"
+          >
+          </div>
+          <div
+            class="bg-neutral-200 aspect-square rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="172:6"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="text-center mt-20 animate__animated animate__fadeIn animate__delay-1s"
+      data-astro-cid-j7pv25f6=""
+      data-astro-source-loc="177:88"
+    >
+      <button
+        class="px-8 py-4 bg-[#D7FF9C] text-neutral-900 rounded-lg hover:bg-opacity-90 transition-all duration-300 inline-flex items-center font-primary group"
+        data-astro-cid-j7pv25f6=""
+        data-astro-source-loc="178:163"
+      >
+        View Collection
+        <svg
+          class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          data-astro-cid-j7pv25f6=""
+          data-astro-source-loc="180:133"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+            data-astro-cid-j7pv25f6=""
+            data-astro-source-loc="181:6"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div id="root">
+  <section
+    id="story"
+    class="py-16 px-4 md:px-16 bg-black relative overflow-hidden"
+  >
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div
+        class="absolute inset-0"
+        style="background-image: radial-gradient(#D7FF9C 0.5px, transparent 0.5px); background-size: 30px 30px;"
+      >
+      </div>
+    </div>
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- Story Content -->
+        <div class="relative z-10">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-white mb-6 font-['Cormorant_Garamond'] animate__animated animate__fadeInUp"
+          >
+            Our Crafting <span class="text-[#D7FF9C]">Journey</span>
+          </h2>
+          <div class="space-y-6">
+            <p
+              class="text-gray-300 font-['Montserrat'] animate__animated animate__fadeInUp animate__delay-1s"
+            >
+              For generations, our artisans have preserved the time-honored
+              tradition of wicker weaving, infusing each piece with stories of
+              dedication and masterful craftsmanship.
+            </p>
+            <div
+              class="flex items-center space-x-8 py-6 animate__animated animate__fadeInUp animate__delay-2s"
+            >
+              <div class="text-center">
+                <span class="block text-4xl font-bold text-[#D7FF9C] mb-2"
+                  >50+</span
+                >
+                <span class="text-gray-400 text-sm">Master Artisans</span>
+              </div>
+              <div class="text-center">
+                <span class="block text-4xl font-bold text-[#D7FF9C] mb-2"
+                  >1000+</span
+                >
+                <span class="text-gray-400 text-sm">Unique Designs</span>
+              </div>
+              <div class="text-center">
+                <span class="block text-4xl font-bold text-[#D7FF9C] mb-2"
+                  >25+</span
+                >
+                <span class="text-gray-400 text-sm">Years Legacy</span>
+              </div>
+            </div>
+            <div class="animate__animated animate__fadeInUp animate__delay-3s">
+              <a
+                href="/craftsmanship"
+                class="inline-flex items-center px-8 py-3 rounded-full bg-[#2F2F2F] text-[#D7FF9C] hover:bg-[#D7FF9C] hover:text-neutral-900 transition-all duration-300 group"
+              >
+                Discover Our Process
+                <svg
+                  class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Visual Elements -->
+        <div class="relative">
+          <!-- Main Design Element -->
+          <div
+            class="relative z-10 rounded-2xl overflow-hidden bg-[#2F2F2F] animate__animated animate__fadeInRight"
+          >
+            <div class="aspect-w-4 aspect-h-5 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="text-[#D7FF9C] opacity-20 text-[200px] font-['Cormorant_Garamond'] leading-none select-none"
+                >
+                  W
+                </div>
+              </div>
+              <!-- Overlay gradient -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-transparent"
+              >
+              </div>
+            </div>
+          </div>
+          <!-- Decorative Elements -->
+          <div
+            class="absolute -top-10 -right-10 w-40 h-40 bg-[#D7FF9C]/5 rounded-full blur-2xl"
+          >
+          </div>
+          <div
+            class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#D7FF9C]/5 rounded-full blur-2xl"
+          >
+          </div>
+          <!-- Floating Accent -->
+          <div
+            class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              class="w-24 h-24 rounded-full border-2 border-[#D7FF9C]/20 flex items-center justify-center animate-spin-slow"
+            >
+              <div class="w-16 h-16 rounded-full border-2 border-[#D7FF9C]/40">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
+<section id="reviews" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="font-bold text-4xl md:text-5xl mb-6">
+          Google Reviews
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          See what our customers are saying on Google
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-white p-6 shadow rounded">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-semibold text-gray-900">Sarah Anderson</h3>
+              <p class="text-gray-500 text-sm">Interior Designer</p>
+            </div>
+          </div>
+          <p class="text-gray-800 mb-4">
+            "The craftsmanship is exceptional. Each basket feels like a piece of art, adding both functionality and beauty to my spaces."
+          </p>
+          <div class="flex">
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+          </div>
+        </div>
+  
+        <!-- Review 2 -->
+        <div class="bg-white p-6 shadow rounded">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-semibold text-gray-900">Michael Chen</h3>
+              <p class="text-gray-500 text-sm">Home Curator</p>
+            </div>
+          </div>
+          <p class="text-gray-800 mb-4">
+            "The sustainable approach and attention to detail is remarkable. These baskets tell a story of tradition and innovation."
+          </p>
+          <div class="flex">
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+          </div>
+        </div>
+  
+        <!-- Review 3 -->
+        <div class="bg-white p-6 shadow rounded">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-semibold text-gray-900">Emma Thompson</h3>
+              <p class="text-gray-500 text-sm">Eco Lifestyle Blogger</p>
+            </div>
+          </div>
+          <p class="text-gray-800 mb-4">
+            "Not just storage solutions, but conversation pieces. The environmental consciousness behind each piece is inspiring."
+          </p>
+          <div class="flex">
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+            <i class="fa-solid fa-star text-[#F4C150]"></i>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-16 text-center">
+        <a href="#" class="inline-flex items-center space-x-2 text-blue-600">
+          <span class="font-medium">See all Google reviews</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+
+<section id="aiChatbot" class="py-20 md:px-4 bg-black">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Content Column -->
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            AI-Powered Chat Support
+            <span class="block text-[#D7FF9C]">Available 24/7</span>
+          </h2>
+          <p class="text-neutral-300 mb-8">
+            Experience compassionate and understanding conversations with our AI therapist. Get support, guidance, and coping strategies whenever you need them.
+          </p>
+          <button class="bg-[#D7FF9C] text-black px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300 transform hover:scale-105">
+            Try Now
+          </button>
+        </div>
+
+        <!-- Chat Interface Preview -->
+        <div class="bg-neutral-800/50 backdrop-blur-lg rounded-2xl border border-neutral-700 p-4 animate__animated animate__fadeInRight">
+          <div class="flex flex-col h-[500px]">
+            <!-- Chat Header -->
+            <div class="flex items-center p-4 border-b border-neutral-700">
+              <div class="w-3 h-3 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
+              <span class="text-white font-medium">AI Therapist</span>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="flex-1 overflow-y-auto p-4 space-y-4">
+              <!-- AI Message -->
+              <div class="flex items-start max-w-[80%]">
+                <div class="bg-neutral-700/50 rounded-2xl rounded-tl-none p-4 text-neutral-200">
+                  Hello! How are you feeling today? I'm here to listen and support you.
+                </div>
+              </div>
+
+              <!-- User Message -->
+              <div class="flex items-start justify-end">
+                <div class="bg-emerald-500/20 rounded-2xl rounded-tr-none p-4 text-emerald-300 ml-auto">
+                  I've been feeling a bit overwhelmed lately with work...
+                </div>
+              </div>
+
+              <!-- AI Message -->
+              <div class="flex items-start max-w-[80%]">
+                <div class="bg-neutral-700/50 rounded-2xl rounded-tl-none p-4 text-neutral-200">
+                  I understand how work stress can be overwhelming. Let's explore some coping strategies together. Would you like to tell me more about what's causing you stress?
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="p-4 border-t border-neutral-700">
+              <div class="flex items-center bg-neutral-700/30 rounded-full px-4 py-2">
+                <input type="text" placeholder="Type your message..." class="bg-transparent border-none flex-1 text-neutral-300 focus:outline-none">
+                <button class="ml-2 text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+<!-- Vanilla JS Slider -->
+<script is:inline>
+
+  // Slider functionality
+    const slides = document.querySelectorAll(".slide");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let sliderInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function startAutoplay() {
+      sliderInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoplay() {
+      clearInterval(sliderInterval);
+    }
+
+    nextButton.addEventListener("click", () => {
+      stopAutoplay();
+      nextSlide();
+      startAutoplay();
+    });
+
+    prevButton.addEventListener("click", () => {
+      stopAutoplay();
+      prevSlide();
+      startAutoplay();
+    });
+
+    startAutoplay();
+
+    // Add mobile menu toggle functionality
+    
+    
+
+   
+
+    // Close mobile menu when clicking outside
+    
+
+    // Close mobile menu when resizing to desktop
+   
+ 
+</script>
+
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
+  /* Custom off-white background class */
+  .bg-offwhite {
+    background-color: #f9f9f9;
+  }
+  /* Slider Styles */
+  .slider {
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+  }
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    background-color: black;
+  }
+  .slide.active {
+    opacity: 1;
+    position: relative;
+  }
+  /* Smooth transitions for navbar */
+  header {
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
 </style>
