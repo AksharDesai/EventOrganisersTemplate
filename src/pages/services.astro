@@ -3,393 +3,387 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-
- <element id="49db1359-c935-4fcb-b810-f12fb0140d03" data-section-id="49db1359-c935-4fcb-b810-f12fb0140d03">
-  <div id="root">
-    <section id="category-showcase" class="bg-gradient-to-b from-[#121212] to-[#1a1a1a] py-24">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            <span class="bg-clip-text  text-white">Categories</span>
-          </h2>
-          <div class="w-32 h-1 bg-gradient-to-r from-[#d5f997] to-[#9be865] mx-auto rounded-full mb-6"></div>
-          <p class="text-gray-300 max-w-2xl mx-auto text-lg animate-fade-in delay-200">
-            Discover inspiring spaces and share your creative vision with our community
-          </p>
-        </div>
-
-        <!-- Slider container with enhanced styling -->
-        <div class="slider-container relative overflow-hidden rounded-xl shadow-2xl">
-          <!-- Progress bar -->
-          <div class="progress-bar absolute top-0 left-0 w-full h-1 z-10">
-            <div id="progressIndicator" class="h-full bg-gradient-to-r from-[#d5f997] to-[#9be865] rounded-full transition-all duration-500" style="width: 0%"></div>
+  <element id="49db1359-c935-4fcb-b810-f12fb0140d03" data-section-id="49db1359-c935-4fcb-b810-f12fb0140d03">
+    <div id="root">
+      <section id="category-showcase" class="bg-gradient-to-b from-[#121212] to-[#1a1a1a] py-12 md:py-24">
+        <div class="container mx-auto px-2 md:px-4">
+          <div class="text-center mb-8 md:mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 animate-fade-in">
+              <span class="bg-clip-text text-white">Categories</span>
+            </h2>
+            <div class="w-24 md:w-32 h-1 bg-gradient-to-r from-[#d5f997] to-[#9be865] mx-auto rounded-full mb-4 md:mb-6"></div>
+            <p class="text-gray-300 max-w-2xl mx-auto text-base md:text-lg animate-fade-in delay-200">
+              Discover inspiring spaces and share your creative vision with our community
+            </p>
+          </div>
+  
+          <!-- Slider container with enhanced styling -->
+          <div class="slider-container relative overflow-hidden rounded-xl shadow-2xl">
+            <!-- Progress bar -->
+            <div class="progress-bar absolute top-0 left-0 w-full h-1 z-10">
+              <div id="progressIndicator" class="h-full bg-gradient-to-r from-[#d5f997] to-[#9be865] rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+            
+            <!-- Slider track -->
+            <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out">
+              <!-- Slide 1 -->
+              <div class="slide min-w-full p-2 md:p-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
+                  <!-- Card 1 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Birthday">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-gift text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Birthday</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card 2 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Wedding">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-heart text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Wedding</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card 3 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Decoration">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Decoration</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card 4 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Photography">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-camera text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Photography</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Slide 2 -->
+              <div class="slide min-w-full p-2 md:p-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
+                  <!-- Card 5 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Catering">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-utensils text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Catering</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card 6 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="DJ & Music">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-music text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">DJ & Music</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card 7 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Corporate">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-briefcase text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Corporate</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card 8 -->
+                  <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
+                    <div class="image-container absolute inset-0 flex items-center justify-center">
+                      <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Festivals">
+                    </div>
+                    <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
+                      <div class="icon-container bg-[#1d1c1c]/80 p-3 md:p-4 rounded-full mb-2 md:mb-4 rotate-animation">
+                        <i class="fa-solid fa-sparkles text-[#d7ff9c] text-xl md:text-3xl"></i>
+                      </div>
+                      <p class="text-[#d7ff9c] font-bold font-mono text-lg md:text-2xl tracking-wider mb-1 md:mb-2">Festivals</p>
+                      <div class="mt-2 md:mt-4 view-button px-3 py-1 md:px-4 md:py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-xs md:text-sm transition-all hover:bg-[#d7ff9c]/20">
+                        <span class="flex items-center"><i class="fa-solid fa-eye mr-1 md:mr-2"></i> View Gallery</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Navigation arrows (overlaid on the slider) -->
+            <button id="prevSlide" class="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center backdrop-blur-sm z-10 transition-all duration-300">
+              <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+            </button>
+            <button id="nextSlide" class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center backdrop-blur-sm z-10 transition-all duration-300">
+              <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+            </button>
+          </div>
+  
+          <!-- Slide indicators -->
+          <div class="flex justify-center mt-4 md:mt-8 space-x-2">
+            <button class="slide-indicator w-8 md:w-10 h-2 rounded-full bg-gray-600 transition-all duration-300" data-index="0"></button>
+            <button class="slide-indicator w-8 md:w-10 h-2 rounded-full bg-gray-600 transition-all duration-300" data-index="1"></button>
           </div>
           
-          <!-- Slider track -->
-          <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out">
-            <!-- Slide 1 -->
-            <div class="slide min-w-full p-6">
-              <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Birthday">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-gift text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Birthday</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Wedding">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-heart text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Wedding</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Decoration">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-wand-magic-sparkles text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Decoration</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Photography">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-camera text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Photography</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide min-w-full p-6">
-              <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 5 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Catering">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-utensils text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Catering</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Card 6 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="DJ & Music">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-music text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">DJ & Music</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Card 7 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Corporate">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-briefcase text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Corporate</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Card 8 -->
-                <div class="category-card relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-900/20 hover:shadow-xl" onclick="revealImage(this)">
-                  <div class="image-container absolute inset-0 flex items-center justify-center">
-                    <img class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-110" src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="Festivals">
-                  </div>
-                  <div class="default-overlay absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm border-[#333] border-2">
-                    <div class="icon-container bg-[#1d1c1c]/80 p-4 rounded-full mb-4 rotate-animation">
-                      <i class="fa-solid fa-sparkles text-[#d7ff9c] text-3xl"></i>
-                    </div>
-                    <p class="text-[#d7ff9c] font-bold font-mono text-2xl tracking-wider mb-2">Festivals</p>
-                    <div class="mt-4 view-button px-4 py-2 bg-[#d7ff9c]/10 rounded-full border border-[#d7ff9c]/30 text-white text-sm transition-all hover:bg-[#d7ff9c]/20">
-                      <span class="flex items-center"><i class="fa-solid fa-eye mr-2"></i> View Gallery</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Call to action -->
+          <div class="text-center mt-8 md:mt-16">
+            <a href="#" class="inline-block px-6 py-2 md:px-8 md:py-3 bg-gradient-to-r from-[#d5f997] to-[#9be865] text-gray-900 font-bold rounded-full transition-transform hover:scale-105 hover:shadow-lg text-sm md:text-base">
+              Get Quote Now 
+            </a>
           </div>
-
-          <!-- Navigation arrows (overlaid on the slider) -->
-          <button id="prevSlide" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm z-10 transition-all duration-300">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button id="nextSlide" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm z-10 transition-all duration-300">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
         </div>
-
-        <!-- Slide indicators -->
-        <div class="flex justify-center mt-8 space-x-2">
-          <button class="slide-indicator w-10 h-2 rounded-full bg-gray-600 transition-all duration-300" data-index="0"></button>
-          <button class="slide-indicator w-10 h-2 rounded-full bg-gray-600 transition-all duration-300" data-index="1"></button>
-        </div>
-        
-        <!-- Call to action -->
-        <div class="text-center mt-16">
-          <a href="#" class="inline-block px-8 py-3 bg-gradient-to-r from-[#d5f997] to-[#9be865] text-gray-900 font-bold rounded-full transition-transform hover:scale-105 hover:shadow-lg">
-            Get Quote Now 
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Styles -->
-    <style>
-      @keyframes fadeInScale {
-        from {
-          opacity: 0;
-          transform: scale(0.8);
+      </section>
+  
+      <!-- Styles -->
+      <style>
+        @keyframes fadeInScale {
+          from {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
         }
-        to {
+  
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+        }
+        
+        @keyframes slowRotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        .rotate-animation {
+          animation: slowRotate 20s linear infinite;
+        }
+  
+        .category-card {
+          aspect-ratio: 1 / 1;
+          transform: translateY(0);
+          transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover {
+          transform: translateY(-5px);
+        }
+  
+        .image-container {
+          opacity: 0;
+          transform: scale(0.95);
+          transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+  
+        .revealed .image-container {
           opacity: 1;
           transform: scale(1);
         }
-      }
-
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
-      
-      @keyframes slowRotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      
-      .rotate-animation {
-        animation: slowRotate 20s linear infinite;
-      }
-
-      .category-card {
-        aspect-ratio: 1 / 1;
-        transform: translateY(0);
-        transition: transform 0.3s ease;
-      }
-      
-      .category-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .image-container {
-        opacity: 0;
-        transform: scale(0.95);
-        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .revealed .image-container {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      .default-overlay {
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .revealed .default-overlay {
-        opacity: 0;
-        transform: translateY(-20px);
-        pointer-events: none;
-      }
-      
-      .view-button {
-        opacity: 0.9;
-        transform: translateY(0);
-        transition: all 0.3s ease;
-      }
-      
-      .category-card:hover .view-button {
-        opacity: 1;
-        transform: translateY(-5px);
-      }
-      
-      .slide-indicator.active {
-        background: linear-gradient(to right, #d5f997, #9be865);
-        width: 24px;
-      }
-    </style>
-
-    <!-- Scripts -->
-    <script is:inline>
-      // Function to reveal image on card click
-      function revealImage(card) {
-        card.classList.add('revealed');
-        setTimeout(() => {
-          // Optional: Add a class to show a "back to categories" button
-          const backButton = document.createElement('div');
-          backButton.className = 'absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full cursor-pointer z-10 flex items-center backdrop-blur-sm';
-          backButton.innerHTML = '<i class="fa-solid fa-arrow-left mr-2"></i> Back';
-          backButton.onclick = (e) => {
-            e.stopPropagation();
-            card.classList.remove('revealed');
-            backButton.remove();
-          };
-          card.appendChild(backButton);
-        }, 500);
-      }
-      
-      // Enhanced slider functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const sliderTrack = document.getElementById('sliderTrack');
-        const slides = document.querySelectorAll('.slide');
-        const indicators = document.querySelectorAll('.slide-indicator');
-        const progressIndicator = document.getElementById('progressIndicator');
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-        
-        // Update indicators to show which slide is active
-        function updateIndicators() {
-          indicators.forEach((indicator, index) => {
-            if (index === currentSlide) {
-              indicator.classList.add('active');
-            } else {
-              indicator.classList.remove('active');
-            }
-          });
+  
+        .default-overlay {
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+  
+        .revealed .default-overlay {
+          opacity: 0;
+          transform: translateY(-20px);
+          pointer-events: none;
         }
         
-        // Update progress bar
-        function updateProgress() {
-          const progress = ((currentSlide + 1) / totalSlides) * 100;
-          progressIndicator.style.width = `${progress}%`;
+        .view-button {
+          opacity: 0.9;
+          transform: translateY(0);
+          transition: all 0.3s ease;
         }
         
-        // Update slider position and indicators
-        function updateSlider() {
-          sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+        .category-card:hover .view-button {
+          opacity: 1;
+          transform: translateY(-5px);
+        }
+        
+        .slide-indicator.active {
+          background: linear-gradient(to right, #d5f997, #9be865);
+          width: 20px;
+        }
+  
+        /* Ensure content stays inside the card on small screens */
+        @media (max-width: 640px) {
+          .default-overlay {
+            padding: 0.5rem;
+          }
+        }
+      </style>
+  
+      <!-- Scripts -->
+      <script is:inline>
+        // Function to reveal image on card click
+        function revealImage(card) {
+          card.classList.add('revealed');
+          setTimeout(() => {
+            // Optional: Add a class to show a "back to categories" button
+            const backButton = document.createElement('div');
+            backButton.className = 'absolute bottom-2 right-2 md:bottom-4 md:right-4 bg-black/70 text-white px-2 py-1 text-xs md:text-sm md:px-3 md:py-1 rounded-full cursor-pointer z-10 flex items-center backdrop-blur-sm';
+            backButton.innerHTML = '<i class="fa-solid fa-arrow-left mr-1 md:mr-2"></i> Back';
+            backButton.onclick = (e) => {
+              e.stopPropagation();
+              card.classList.remove('revealed');
+              backButton.remove();
+            };
+            card.appendChild(backButton);
+          }, 500);
+        }
+        
+        // Enhanced slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+          const sliderTrack = document.getElementById('sliderTrack');
+          const slides = document.querySelectorAll('.slide');
+          const indicators = document.querySelectorAll('.slide-indicator');
+          const progressIndicator = document.getElementById('progressIndicator');
+          let currentSlide = 0;
+          const totalSlides = slides.length;
+          
+          // Update indicators to show which slide is active
+          function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+              if (index === currentSlide) {
+                indicator.classList.add('active');
+              } else {
+                indicator.classList.remove('active');
+              }
+            });
+          }
+          
+          // Update progress bar
+          function updateProgress() {
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            progressIndicator.style.width = `${progress}%`;
+          }
+          
+          // Update slider position and indicators
+          function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateIndicators();
+            updateProgress();
+          }
+          
+          // Set initial state
           updateIndicators();
           updateProgress();
-        }
-        
-        // Set initial state
-        updateIndicators();
-        updateProgress();
-        
-        // Event listeners for navigation
-        document.getElementById('prevSlide').addEventListener('click', function() {
-          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-          updateSlider();
-        });
-        
-        document.getElementById('nextSlide').addEventListener('click', function() {
-          currentSlide = (currentSlide + 1) % totalSlides;
-          updateSlider();
-        });
-        
-        // Allow clicking on indicators to jump to slides
-        indicators.forEach((indicator) => {
-          indicator.addEventListener('click', function() {
-            currentSlide = parseInt(this.getAttribute('data-index'));
+          
+          // Navigation buttons
+          document.getElementById('prevSlide').addEventListener('click', function() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateSlider();
           });
-        });
-        
-        // Optional: Auto-advance slides
-        let autoSlideInterval = setInterval(() => {
-          currentSlide = (currentSlide + 1) % totalSlides;
-          updateSlider();
-        }, 6000);
-        
-        // Pause auto-sliding when interacting with the slider
-        const sliderContainer = document.querySelector('.slider-container');
-        sliderContainer.addEventListener('mouseenter', () => {
-          clearInterval(autoSlideInterval);
-        });
-        
-        sliderContainer.addEventListener('mouseleave', () => {
-          autoSlideInterval = setInterval(() => {
+          
+          document.getElementById('nextSlide').addEventListener('click', function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+          });
+          
+          // Click on indicators to jump to a slide
+          indicators.forEach((indicator) => {
+            indicator.addEventListener('click', function() {
+              currentSlide = parseInt(this.getAttribute('data-index'));
+              updateSlider();
+            });
+          });
+          
+          // Auto-advance slide once after a delay of 6000ms (6 seconds)
+          setTimeout(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             updateSlider();
           }, 6000);
-        });
-        
-        // Enable swipe functionality for mobile (simple implementation)
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        sliderContainer.addEventListener('touchstart', (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-        });
-        
-        sliderContainer.addEventListener('touchend', (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
-        });
-        
-        function handleSwipe() {
-          if (touchEndX < touchStartX - 50) {
-            // Swipe left, go to next slide
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-          }
           
-          if (touchEndX > touchStartX + 50) {
-            // Swipe right, go to previous slide
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider();
+          // Enable swipe functionality for mobile
+          const sliderContainer = document.querySelector('.slider-container');
+          let touchStartX = 0;
+          let touchEndX = 0;
+          
+          sliderContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          });
+          
+          sliderContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          });
+          
+          function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+              // Swipe left, go to next slide
+              currentSlide = (currentSlide + 1) % totalSlides;
+              updateSlider();
+            }
+            
+            if (touchEndX > touchStartX + 50) {
+              // Swipe right, go to previous slide
+              currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+              updateSlider();
+            }
           }
-        }
-      });
-    </script>
-  </div>
-</element>
+        });
+      </script>
+    </div>
+  </element>
   
       
 

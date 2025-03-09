@@ -1,28 +1,27 @@
 <!-- Content with padding-top to account for fixed navbar -->
 <main class="md:pt-16">
   <!-- Above the Fold: Two-Column Layout -->
-  <section class="grid grid-cols-1 md:grid-cols-[30%_70%] min-h-screen md:min-h-[80vh] md:mt-20">
-    <!-- Hero Section (Left Column) -->
-    <div class="flex flex-col justify-center items-center p-8 text-white border-l-2 border-[#d7ff9c] bg-black">
+  <section class="grid grid-rows-2 md:grid-rows-none md:grid-cols-[30%_70%] min-h-screen md:min-h-[80vh] md:mt-4">
+    <!-- Hero Section (Top Row on small screens, Left Column on medium screens) -->
+    <div class="flex flex-col justify-center items-center p-8 text-white border-l md:border-l-2  border-[#d7ff9c] bg-black h-full">
       <h1 class="text-4xl font-serif text-[#d7ff9c]">EventSmile</h1>
       <p class="text-sm font-serif mt-2">Business Context short</p>
-   
     </div>
-    <!-- Image Slider (Right Column) -->
-    <div class="flex items-center justify-center overflow-hidden">
+    <!-- Image Slider (Bottom Row on small screens, Right Column on medium screens) -->
+    <div class="flex items-center justify-center overflow-hidden h-full">
       <!-- Using aspect-video ensures a 16:9 ratio; change as needed -->
       <div class="slider relative w-full h-full aspect-video">
         <div class="slide active absolute inset-0 transition-opacity duration-700 ease-in-out">
-          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1560494667-2fd47f82c9db?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Ambiance 1" />
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1560494667-2fd47f82c9db?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Restaurant Ambiance 1" />
         </div>
-        <div class=" vignette slide absolute inset-0 transition-opacity duration-700 ease-in-out">
-          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556125574-d7f27ec36a06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Ambiance 2" />
+        <div class="vignette slide absolute inset-0 transition-opacity duration-700 ease-in-out">
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556125574-d7f27ec36a06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Restaurant Ambiance 2" />
         </div>
-        <div class=" vignette slide absolute inset-0 transition-opacity duration-700 ease-in-out">
+        <div class="vignette slide absolute inset-0 transition-opacity duration-700 ease-in-out">
           <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1604668915999-03e1269f6af6?q=80&w=2072&auto=format&fit=crop" alt="Restaurant Ambiance 3" />
         </div>
         <div class="vignette slide absolute inset-0 transition-opacity duration-700 ease-in-out">
-          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1616734755909-bb016ce64930?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant Ambiance 4" />
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1616734755909-bb016ce64930?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Restaurant Ambiance 4" />
         </div>
         <!-- Navigation Arrows (optional) -->
         <button id="prev" class="hidden">&#10094;</button>
@@ -30,6 +29,7 @@
       </div>
     </div>
   </section>
+  
 </main>
 <section
   id="collection"
